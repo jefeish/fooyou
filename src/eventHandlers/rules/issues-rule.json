@@ -1,0 +1,17 @@
+{
+  "conditions": {
+    "all": [
+      {
+        "fact": "payload.issue.user.login",
+        "operator": "equal",
+        "value": "jefeish"
+      }
+    ]
+  },
+  "event": {
+    "type": "foobar",
+    "params": {
+      "message": "found the right 'login'"
+    }
+  }
+}

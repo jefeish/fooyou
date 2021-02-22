@@ -1,0 +1,58 @@
+{
+  "name": "embedded-repo-sync-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Allow the syncing of external repo code into a mono-repo, as a subfolder",
+  "author": "jefeish <jefeish@github.com>",
+  "license": "ISC",
+  "repository": "https://github.com/jefeish/embedded-repo-sync-app.git",
+  "homepage": "https://github.com/jefeish/embedded-repo-sync-app",
+  "bugs": "https://github.com/jefeish/embedded-repo-sync-app/issues",
+  "keywords": [
+    "probot",
+    "github",
+    "probot-app"
+  ],
+  "scripts": {
+    "dev": "nodemon",
+    "start": "probot run ./src/index.js",
+    "trace": "LOG_LEVEL=trace npm start",
+    "lint": "standard --fix",
+    "test": "jest && standard",
+    "test:watch": "jest --watch --notify --notifyMode=change --coverage"
+  },
+  "dependencies": {
+    "acorn": "^7.1.0",
+    "express-vue": "^5.15.0",
+    "flat": "^5.0.0",
+    "json-rules-engine": "^5.0.3",
+    "probot": "^9.9.7",
+    "probot-config": "^1.1.0"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "js-yaml": "^3.13.1",
+    "nock": "^12.0.0",
+    "nodemon": "^2.0.0",
+    "smee-client": "^1.1.0",
+    "standard": "^14.3.1"
+  },
+  "engines": {
+    "node": ">= 8.3.0"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
+  },
+  "nodemonConfig": {
+    "exec": "npm start",
+    "watch": [
+      ".env",
+      "."
+    ]
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
+}
